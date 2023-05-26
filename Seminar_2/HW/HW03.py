@@ -8,3 +8,10 @@ Input:
 Output:
 1 2 4 8
 """
+
+input_number = int(input('Please, enter a number:\n'))
+
+k = 0
+while 2 ** k <= input_number:
+    print(2 ** k, end=', ')
+    k += 1

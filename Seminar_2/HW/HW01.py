@@ -10,3 +10,18 @@ Input:
 Output:
 2
 """
+
+import random
+
+num = random.randint(2, 8)
+print(f'On the table lies {num} coins')
+tails = 0
+eagle = 0
+for i in range(num):
+    side = random.randint(0, 1)
+    if side == 0: 
+        eagle += 1
+    else:
+        tails += 1
+    print(side, end=' ')
+print (f'\nThe minimum number of flips in this situation -> {eagle if eagle < tails else tails}')

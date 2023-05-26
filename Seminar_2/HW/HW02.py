@@ -12,3 +12,26 @@ Output:
 1. -> 2 2
 2. -> 2 3
 """
+
+sum_of_numbers = int(input("Please, enter sum of numbers: "))
+product_of_numbers = int(input("Please, enter product of numbers "))
+
+flag = True
+x = 0
+y = 0
+
+for i in range(2, 1001):
+    for j in range(2, 1001):
+        if i + j == sum_of_numbers and i * j == product_of_numbers:
+            flag = False
+            x = i
+            y = j
+            break
+        else:
+            j += 1
+    if flag == False:
+        break
+    else:
+        i += 1
+
+print(f"x = {x}, y = {y}")
