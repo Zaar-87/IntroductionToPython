@@ -16,11 +16,11 @@ length = int(input("Please, enter array size:\n "))
 generator_last = int(input("Please, enter maximum number for generator:\n "))
 newList = [random.randint(1, generator_last) for _ in range(length)]
 print(f'Array: {newList}')
-num = int(input("Please, enter number to check:\n "))
+number = int(input("Please, enter number to check:\n "))
 
-if newList.count(num) > 0:
-    print(f'Number {num} meets {newList.count(num)} time(s)')
-elif newList.count(num) == 0:
-    print(f'Sorry! no matches!')
+if newList.count(number) > 0:
+    print(f'Number {number} meets {newList.count(number)} time(s)')
+elif newList.count(number) == 0:
+    print(f'Sorry, no matches!')
 else:
-    print(f'Unknown error')
+    print(f'Unknown error!')
