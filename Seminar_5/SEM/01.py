@@ -10,6 +10,8 @@ Output: 13
 """
 import custom_func
 
+print(f"The fibonacci number is -> {custom_func.last_fibon}")
+
 # def fibonacci(n):
 #     if n <= 0:
 #         return 0
@@ -21,5 +23,3 @@ import custom_func
 # fibonacci_number = fibonacci(num)
 
 # print(f"The fibonacci number is -> {fibonacci_number}")
-
-print(f"The fibonacci number is -> {custom_func.LastFibon}")
