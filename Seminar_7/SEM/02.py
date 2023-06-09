@@ -17,3 +17,12 @@ print(*find_farthest_orbit(orbits))
 Вывод:
 2.5 10
 """
+
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+
+def find_fathest_orbit(orbits):
+    filtered_orbits = filter(lambda x: x[0] != x[1], orbits)
+    return max(filtered_orbits, key=lambda x: x[0] * x[1])
+
+result = find_fathest_orbit(orbits)
+print(find_fathest_orbit(orbits))

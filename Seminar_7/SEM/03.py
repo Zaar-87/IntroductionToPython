@@ -15,3 +15,21 @@ print(‘different’)
 Вывод:
 same
 """
+
+values = [1, 2, 3, 4, 5]
+
+def same_by(f, items):
+    for item in items:
+        if not f(item):
+            return False
+    return True
+
+result = same_by(lambda x: x % 2 == 0, values)
+print(result)
+
+"""
+# not optimal
+def same_by(characteristic, objects):
+    new = list(filter(characteristic, objects))
+    return len(new) == len(objects)
+"""
