@@ -18,3 +18,15 @@ print_operation_table(lambda x, y: x * y)
  5 10 15 20 25 30
  6 12 18 24 30 36
 """
+
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    temp_function = operation
+    string = ''
+    for i in range(1, num_rows + 1):
+        for j in range(1, num_columns + 1):
+            result = temp_function(i, j)
+            string += str(result) + '\t '
+        print(f"{string}")
+        string = ''
+
+print_operation_table(lambda x, y: x * y)
